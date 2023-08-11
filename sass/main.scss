@@ -101,6 +101,7 @@ body {
 }
 
 .weather {
+  position: relative;
   display: flex;
   margin-top: 1.2rem;
   align-items: center;
@@ -156,6 +157,12 @@ body {
     p {
       font-weight: 500;
     }
+  }
+  &__symbol {
+    position: absolute;
+    font-size: 3.2rem;
+    top: 22rem;
+    left: 18.3rem;
   }
 }
 #time {

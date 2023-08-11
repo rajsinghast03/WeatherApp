@@ -130,6 +130,7 @@ body {
     flex: 0 0 20%; }
 
 .weather {
+  position: relative;
   display: flex;
   margin-top: 1.2rem;
   align-items: center;
@@ -178,6 +179,11 @@ body {
     align-items: center; }
     .weather__now p {
       font-weight: 500; }
+  .weather__symbol {
+    position: absolute;
+    font-size: 3.2rem;
+    top: 22rem;
+    left: 18.3rem; }
 
 #time {
   color: #ccc; }
