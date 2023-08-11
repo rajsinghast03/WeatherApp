@@ -90,12 +90,10 @@ body {
 }
 
 .content {
-  // overflow: ;
   display: flex;
   .right {
     background-color: $color-grey-light-3;
     flex: 1;
-    // height: 65rem;
   }
   .left {
     flex: 0 0 20%;
@@ -105,9 +103,9 @@ body {
 .weather {
   display: flex;
   margin-top: 1.2rem;
-  // justify-content: center;
   align-items: center;
   flex-direction: column;
+
   &__curr-date::after {
     content: ""; /* This is necessary for the pseudo element to work. */
     display: block; /* This will put the pseudo element on its own line. */

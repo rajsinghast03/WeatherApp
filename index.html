@@ -4,13 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/css/style.css" />
     <script defer src="js/script.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="content">
-        <div class="left"></div>
+        <div class="left">
+          <form action="#" class="search">
+            <input
+              type="text"
+              class="search__input"
+              placeholder="Search for places..."
+            />
+            <button class="search__button">
+              <svg class="search__icon">
+                <use xlink:href="sprite.svg#icon-search"></use>
+              </svg>
+            </button>
+          </form>
+
+          <div class="weather">
+            <div class="weather__location flex">
+              <p>Gurgaon,</p>
+              <p>India</p>
+            </div>
+            <h3 class="flex">34&#8451;</h3>
+            <p class="weather__curr-date flex">
+              Monday,<span id="time">16:00</span>
+            </p>
+            <div class="weather__info flex">
+              <div class="weather__now">
+                <img src="weather_icons/day/113.png" alt="Sunny" />
+                <p>Sunny</p>
+              </div>
+              <div class="weather__rain">
+                <img src="weather_icons/day/308.png" alt="Rain" />
+                <p>30% - Rain</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="right"></div>
       </div>
     </div>
