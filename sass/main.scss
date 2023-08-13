@@ -26,7 +26,7 @@ body {
 .container {
   overflow: hidden;
   min-height: 65rem;
-  max-width: 135rem;
+  max-width: 105rem;
   background-color: $color-primary;
   margin: 2rem auto;
   border-radius: 18px;
@@ -96,7 +96,7 @@ body {
     flex: 1;
   }
   .left {
-    flex: 0 0 20%;
+    flex: 0 0 25%;
   }
 }
 
@@ -190,12 +190,12 @@ body {
     font-size: 1.8rem;
     font-weight: 500;
     border-bottom: 1px solid #000;
-    margin-left: 1.8rem;
+    margin-left: 4.7rem;
   }
 
   &__icons {
     display: flex;
-    margin-left: 79rem;
+    // margin-left: 79rem;
 
     button {
       padding: 0.7rem;
@@ -217,21 +217,25 @@ button.active {
 
 .cards {
   display: flex;
-  margin-left: 7rem;
+  margin-left: 4rem;
 
   .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 8rem;
-    padding: 1.2rem 2.2rem;
+    padding: 1.2rem 1.4rem;
     margin-top: 2rem;
-    margin-left: 2rem;
+
     background-color: $color-primary;
     border-radius: 10px;
     font-size: 1.6rem;
     font-weight: 400;
     box-shadow: $shadow-light;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
 
     .temp {
       font-size: 1.3rem;
@@ -242,4 +246,113 @@ button.active {
       }
     }
   }
+}
+
+.heading__secondary {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-left: 4.5rem;
+  margin-top: 4rem;
+}
+
+.highlights__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 20rem);
+  grid-template-rows: repeat(2, 18.5rem);
+  margin-bottom: 2rem;
+  margin-left: 4rem;
+  column-gap: 2rem;
+}
+
+.today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 6rem;
+  padding: 2.2rem 2.9rem;
+  margin-top: 2rem;
+
+  background-color: $color-primary;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  box-shadow: $shadow-light;
+  position: relative;
+
+  h2 {
+    font-weight: 400;
+    font-size: 3.8rem;
+  }
+
+  h4 {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.8rem;
+    font-weight: 400;
+    color: $color-grey-light-4;
+  }
+  .km {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .sunrise {
+    margin-left: -3.2rem;
+    img {
+      height: 4rem;
+      width: 4rem;
+    }
+    display: flex;
+    align-items: center;
+  }
+  .sunset {
+    margin-left: -3.2rem;
+
+    img {
+      height: 4rem;
+      width: 4rem;
+    }
+    display: flex;
+    align-items: center;
+  }
+  .wind__direction {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.compass {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.8rem;
+  fill: $color-grey-dark-3;
+}
+
+.progress {
+  position: relative;
+  margin: 4px;
+  float: left;
+  text-align: center;
+}
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 90px;
+  height: 45px; /* Half circle (overflow) */
+  margin-bottom: -14px; /* bring the numbers up */
+}
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 90px; /* full circle! */
+  border-radius: 50%;
+
+  border: 15px solid #eee; /* half gray, */
+  border-bottom-color: #eee; /* half azure */
+  border-left-color: #fea31f;
+  border-top-color: #fea31f;
+  border-right-color: #eee;
 }
