@@ -29,9 +29,6 @@ html {
       margin-left: 2rem;
       display: block;
     }
-    .weather__symbol {
-      left: 21rem;
-    }
   }
 }
 
@@ -119,15 +116,14 @@ body {
   display: flex;
   .right {
     background-color: $color-grey-light-3;
-    flex: 1;
+    flex: 1 0 auto;
   }
   .left {
-    flex: 0 0 25%;
+    flex: 1 0 25%;
   }
 }
 
 .weather {
-  position: relative;
   display: flex;
   margin-top: 1.2rem;
   align-items: center;
@@ -147,7 +143,7 @@ body {
   }
 
   &__location {
-    max-width: 26rem;
+    max-width: 30rem;
     background-color: #96b6c5;
     margin: 1rem auto;
     margin-top: 2.8rem;
@@ -180,13 +176,16 @@ body {
       font-weight: 500;
     }
   }
+}
 
-  &__symbol {
-    position: absolute;
-    font-size: 3.2rem;
-    top: 22rem;
-    left: 18.3rem;
-  }
+.t {
+  position: relative;
+}
+.weather__symbol {
+  position: absolute;
+  font-size: 3.2rem;
+  top: 0.8rem;
+  left: 9.5rem;
 }
 #time {
   color: $color-grey-light-4;
@@ -244,7 +243,7 @@ button.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 0 90px;
+    flex: 0 0 83px;
     margin-top: 2rem;
 
     background-color: $color-primary;

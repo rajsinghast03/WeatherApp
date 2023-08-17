@@ -32,12 +32,14 @@
 
           <div class="weather">
             <div class="weather__location item">
-              <p>Gurgaon,</p>
-              <p>India</p>
+              <p class="city">Gurgaon,</p>
+              <p class="country">India</p>
             </div>
 
-            <h3 class="item">34</h3>
-            <span class="weather__symbol">&#8451;</span>
+            <div class="t">
+              <h3 class="item">34</h3>
+              <span class="weather__symbol">&#8451;</span>
+            </div>
 
             <!-- <h3 class="item">34</h3> -->
             <p class="weather__curr-date item">
@@ -46,11 +48,11 @@
             <div class="weather__info item">
               <div class="weather__now">
                 <img src="weather_icons/day/113.png" alt="Sunny" />
-                <p>Sunny</p>
+                <p class="weather__curr">Sunny</p>
               </div>
               <div class="weather__rain">
                 <img src="weather_icons/day/308.png" alt="Rain" />
-                <p>30% - Rain</p>
+                <p class="rain__per">30% - Rain</p>
               </div>
             </div>
           </div>
@@ -133,7 +135,7 @@
                   <div class="barOverflow">
                     <div class="bar"></div>
                   </div>
-                  <span>8</span>
+                  <span class="index">8</span>
                 </div>
               </div>
               <div class="today">
@@ -153,30 +155,30 @@
                     src="weather_icons/day/113.png"
                     alt="
                 sunrise"
-                  />6:35 AM
+                  /><span class="dawn">6:35 AM</span>
                 </div>
                 <div class="sunset">
                   <img
                     src="weather_icons/night/113.png"
                     alt="
               sunrise"
-                  />5:42 PM
+                  /><span class="dusk">5:42 PM</span>
                 </div>
               </div>
               <div class="today">
                 <h4>Humidity</h4>
                 <h2 class="humidity__bar">12%</h2>
-                <p class="stat">Normal</p>
+                <p class="humid__info">Normal</p>
               </div>
               <div class="today">
                 <h4>Visibility</h4>
-                <h2 class="visibile">5.2 <span class="km">km</span></h2>
-                <p class="stat">Average</p>
+                <h2 class="vis">5.2 <span class="km">km</span></h2>
+                <p class="vis__info">Average</p>
               </div>
               <div class="today">
-                <h4>Air Quality</h4>
-                <h2 class="aqi">109</h2>
-                <p class="aqi__stat">Unhealthy👎</p>
+                <h4>Air Quality (UK-index)</h4>
+                <h2 class="aqi">1</h2>
+                <p class="aqi__info">Good</p>
               </div>
             </div>
           </div>
