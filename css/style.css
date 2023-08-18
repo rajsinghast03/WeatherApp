@@ -287,4 +287,5 @@ button.active {
   /* half azure */
   border-left-color: #fea31f;
   border-top-color: #fea31f;
-  border-right-color: #eee; }
+  border-right-color: #eee;
+  rotate: -135deg; }
