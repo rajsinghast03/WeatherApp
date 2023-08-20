@@ -29,6 +29,11 @@ html {
       margin-left: 2rem;
       display: block;
     }
+    .weather__location {
+      width: 90%;
+
+      text-align: center;
+    }
   }
 }
 
@@ -143,7 +148,9 @@ body {
   }
 
   &__location {
-    max-width: 30rem;
+    // max-width: 30rem;
+    width: 90%;
+    text-align: center;
     background-color: #96b6c5;
     margin: 1rem auto;
     margin-top: 2.8rem;

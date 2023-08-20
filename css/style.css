@@ -17,7 +17,10 @@ html {
       display: none; }
     html .hidden {
       margin-left: 2rem;
-      display: block; } }
+      display: block; }
+    html .weather__location {
+      width: 90%;
+      text-align: center; } }
 
 body {
   font-family: "Poppins", sans-serif;
@@ -106,7 +109,8 @@ body {
     border-bottom: 1px solid #ccc;
     /* This creates the border. */ }
   .weather__location {
-    max-width: 30rem;
+    width: 90%;
+    text-align: center;
     background-color: #96b6c5;
     margin: 1rem auto;
     margin-top: 2.8rem;
