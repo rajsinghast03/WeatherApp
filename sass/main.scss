@@ -47,7 +47,7 @@ body {
 
 .container {
   overflow: hidden;
-  min-height: 65rem;
+  min-height: 63rem;
   max-width: 105rem;
   background-color: $color-primary;
   margin: 2rem auto;
@@ -220,20 +220,6 @@ body {
     font-weight: 500;
     border-bottom: 1px solid #000;
     margin-left: 4.7rem;
-  }
-
-  &__icons {
-    display: flex;
-
-    button {
-      padding: 0.7rem;
-      border-radius: 14px;
-      margin: 1rem;
-      cursor: pointer;
-      outline: none;
-      border: none;
-      background-color: #fff;
-    }
   }
 }
 
