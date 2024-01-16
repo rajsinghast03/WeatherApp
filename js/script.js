@@ -102,21 +102,21 @@ const getWeatherIconCode = function (param) {
   return code;
 };
 
-const setCardIcons = function (arr) {
-  for (let i = 1; i <= 7; ++i) {
-    const card = document.querySelector(`.card--${i}`);
-    const day = getDayOfWeek(arr[i].date).slice(0, 3);
+// const setCardIcons = function (arr) {
+//   for (let i = 1; i <= 7; ++i) {
+//     const card = document.querySelector(`.card--${i}`);
+//     const day = getDayOfWeek(arr[i].date).slice(0, 3);
 
-    card.innerHTML = `<p class="day">${day}</p>
-    <img src="weather_icons/day/${getWeatherIconCode(
-      arr[i]
-    )}.png" alt="weather class="icon" />
-    <div class="temp">
-      <span class="max">${Math.round(arr[i].day.maxtemp_c)}&deg;</span>
-      <span class="min">${Math.round(arr[i].day.mintemp_c)}&deg;</span>
-    </div>`;
-  }
-};
+//     card.innerHTML = `<p class="day">${day}</p>
+//     <img src="weather_icons/day/${getWeatherIconCode(
+//       arr[i]
+//     )}.png" alt="weather class="icon" />
+//     <div class="temp">
+//       <span class="max">${Math.round(arr[i].day.maxtemp_c)}&deg;</span>
+//       <span class="min">${Math.round(arr[i].day.mintemp_c)}&deg;</span>
+//     </div>`;
+//   }
+// };
 
 const getWeatherDetails = async function (inputLocation) {
   try {
@@ -129,6 +129,7 @@ const getWeatherDetails = async function (inputLocation) {
       alert("Invalid City Name!");
       throw new Error("Invalid City Name");
     }
+    console.log(data);
     //setting icon according to weather
     setWeatherIcons(data.current);
     //setting temp
@@ -158,6 +159,7 @@ const getWeatherDetails = async function (inputLocation) {
     progress(data.current.uv);
     uvIndex.textContent = data.current.uv;
     //Sunrise and Sunset
+
     sunrise.textContent = data.forecast.forecastday[0].astro.sunrise;
     sunset.textContent = data.forecast.forecastday[0].astro.sunset;
     //Rain Chances
@@ -165,11 +167,11 @@ const getWeatherDetails = async function (inputLocation) {
     rainChances.innerHTML = `${
       data.forecast.forecastday[0].hour[hourlength - 1].chance_of_rain
     }% - Rain`;
-    // console.log(data);
+    console.log(data);
 
     const foreCastArray = data.forecast.forecastday;
-    // console.log(foreCastArray);
-    setCardIcons(foreCastArray);
+    console.log(foreCastArray);
+    // setCardIcons(foreCastArray);
   } catch (err) {
     console.error(err);
   }
